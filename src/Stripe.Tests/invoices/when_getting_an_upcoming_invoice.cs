@@ -34,8 +34,8 @@ namespace Stripe.Tests
         };
 
         Because of = () =>
-            _stripeInvoice = _stripeInvoiceService.Upcoming(_stripeCustomer.Id);
-        
+            _stripeInvoice = _stripeInvoiceService.Upcoming(_stripeCustomer.Id, null);
+
         It should_have_a_valid_id = () =>
             _stripeInvoice.Id.ShouldBeNull();
 
